@@ -1,0 +1,21 @@
+{
+  "tool": "dnsmasq-safety-checker",
+  "mode": "network",
+  "safe_mode": true,
+  "target": "192.168.1.0/24",
+  "hosts_scanned": 254,
+  "findings": [
+    {
+      "host": "192.168.1.1",
+      "tcp_53_open": true,
+      "exposed_dns": true,
+      "detected_dnsmasq_version": null,
+      "assessment": {
+        "status": "UNKNOWN_EXPOSED",
+        "severity": "REVIEW",
+        "reason": "DNS/DHCP service is reachable, but the dnsmasq version could not be confirmed remotely.",
+        "recommendation": "Check firmware/package version directly and update."
+      }
+    }
+  ]
+}
